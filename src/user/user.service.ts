@@ -12,9 +12,9 @@ export class UserService {
     return [];
   }
 
-  findAll(): IUser {
+  findAll(): IUser[] {
     const readUserData = readFileSync(filePath, 'utf-8');
-    const userData: IUser = JSON.parse(readUserData);
+    const userData: IUser[] = JSON.parse(readUserData);
     return userData;
   }
 }
