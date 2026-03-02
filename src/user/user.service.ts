@@ -8,13 +8,13 @@ const filePath = join(__dirname, '../../data/users.json');
 
 @Injectable()
 export class UserService {
-  test() {
-    return [];
-  }
+    test() {
+        return [];
+    }
 
-  findAll(): IUser[] {
-    const readUserData = readFileSync(filePath, 'utf-8');
-    const userData: IUser[] = JSON.parse(readUserData);
-    return userData;
-  }
+    findAll(): IUser[] {
+        const readUserData = readFileSync(filePath, 'utf-8');
+        const userData = JSON.parse(readUserData) as IUser[];
+        return userData;
+    }
 }
